@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tax Calculation Results</title>
+</head>
+<body>
+    <h1>Tax Calculation Results</h1>
+    <p>Gross amount: {{ gross_amount }}</p>
+    <table>
+        <tr>
+            <th>Tax Band</th>
+            <th>Taxable Amount</th>
+            <th>Tax</th>
+        </tr>
+        {% for band, taxable, tax in tax_breakdown %}
+        <tr>
+            <td>{{ band }}</td>
+            <td>{{ taxable }}</td>
+            <td>{{ tax }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p>Total remaining amount after tax: {{ remaining_amount }}</p>
+</body>
+</html>

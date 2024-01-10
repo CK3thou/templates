@@ -1,0 +1,2 @@
+#core flask framework
+Flask==3.0.0
